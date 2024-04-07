@@ -8,7 +8,6 @@ public class Main {
         task2();
         task3();
         task4();
-        task5();
     }
 
     public static void task1() {
@@ -47,20 +46,6 @@ public class Main {
         List<String> strings = new ArrayList<>(List.of("один", "два","два", "три", "три", "три","два","два"));
         Set<String> stringHashSet = new HashSet<>(strings);
         System.out.println(strings.size() - stringHashSet.size());
-
-    }
-    public static void task5() {
-        List<String> strings = new ArrayList<>(List.of("один", "два", "два", "три", "три", "три"));
-
-        Map<String, Integer> duplicatesCount = new HashMap<>();
-
-        for (String word : strings) {
-            duplicatesCount.put(word, duplicatesCount.getOrDefault(word, 0) + 1);
-        }
-
-        for (Map.Entry<String, Integer> entry : duplicatesCount.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
-        }
 
     }
 
